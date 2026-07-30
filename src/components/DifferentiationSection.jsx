@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import "./DifferentiationSection.css";
 import bgImage from "../assets/Payments-platform-designed-for-differentiation-and-control-small.webp";
 
 function DifferentiationSection() {
