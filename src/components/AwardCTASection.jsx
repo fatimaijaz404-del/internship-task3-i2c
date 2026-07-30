@@ -1,4 +1,3 @@
-import './AwardCTASection.css'
 import awardTrophy from '../assets/award-leading-vendor-768.webp'
 import ctaBg from '../assets/awards-bg-md1.webp'
 
