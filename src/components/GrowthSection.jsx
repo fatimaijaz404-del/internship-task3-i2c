@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import reliableImg from '../assets/Reliable-Payment-Platform.webp'
 import integratedImg from '../assets/Integrated-Financial-Platform.webp'
 import customerImg from '../assets/Customer-Centric-Banking-Solutions.webp'
+import video1 from '../assets/6565541-hd_1080_1920_25fps.mp4'
 
 const STATS = [
   {
@@ -27,9 +28,10 @@ const STATS = [
 function GrowthSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const statRefs = useRef([])
+  const [isPlaying, setIsPlaying] = useState(false)
+  const videoRef = useRef(null)
 
   useEffect(() => {
-    const handleScroll = () => {}
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -39,7 +41,7 @@ function GrowthSection() {
           }
         })
       },
-      { threshold: 0.5, rootMargin: '-20% 0px -20% 0px' }
+      { threshold: 0, rootMargin: '-45% 0px -45% 0px' }
     )
 
     statRefs.current.forEach((el) => {
@@ -48,6 +50,11 @@ function GrowthSection() {
 
     return () => observer.disconnect()
   }, [])
+
+  const handlePlay = () => {
+    setIsPlaying(true)
+    videoRef.current?.play()
+  }
 
   return (
     <section className="growth-section">
@@ -97,6 +104,44 @@ function GrowthSection() {
           <button className="growth-explore-btn">
             Start Exploring <span>↗</span>
           </button>
+        </div>
+
+        <div className="power-inner">
+          <h2 className="power-heading">
+            Shift the power differential<span className="heading-dot">.</span>
+          </h2>
+          <p className="power-desc">
+            Watch how i2c helps these visionaries outperform outdated banking and
+            payments platforms to scale fast and modernize to last.
+          </p>
+
+          <div className="power-cards">
+            <div className="power-card power-card-light">
+              <p>Bridging the gap between global payments and everyday banking.</p>
+            </div>
+
+            <div className="power-card power-card-video" onClick={handlePlay}>
+              <video
+                ref={videoRef}
+                src={video1}
+                className="power-card-video-el"
+                controls={isPlaying}
+                playsInline
+              />
+              {!isPlaying && (
+                <div className="power-play-overlay">
+                  <div className="power-play-btn">▶</div>
+                  <p className="power-card-name">Fillipo Alario</p>
+                  <p className="power-card-role">CEO | Belize Bank</p>
+                </div>
+              )}
+            </div>
+
+            <div className="power-card power-card-light">
+              <p>Powering people who fuel the economy.</p>
+              <span className="power-card-brand">payactiv</span>
+            </div>
+          </div>
         </div>
 
         {STATS.map((item, index) => (

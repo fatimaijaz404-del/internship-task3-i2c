@@ -655,41 +655,39 @@
   margin: 0;
 }
 /* POWER DIFFERENTIAL SECTION */
-.power-section {
-  max-width: 1400px;
-  margin: 100px auto;
-  padding: 0 40px;
+.power-inner {
+  margin-top: 60px;
 }
 
 .power-heading {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 42px;
+  font-size: 32px;
   color: rgb(27, 34, 58);
   margin: 0 0 16px;
 }
 
 .power-desc {
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(27, 34, 58);
-  max-width: 700px;
-  margin-bottom: 40px;
+  max-width: 500px;
+  margin-bottom: 30px;
 }
 
 .power-cards {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .power-card {
-  flex: 1 1 300px;
+  flex: 1 1 150px;
   border-radius: 16px;
-  min-height: 400px;
+  min-height: 300px;
   position: relative;
   overflow: hidden;
-  padding: 24px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -701,14 +699,14 @@
 
 .power-card-light p {
   font-family: 'Inter', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
   color: rgb(27, 34, 58);
 }
 
 .power-card-brand {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   color: rgb(27, 34, 58);
 }
 
@@ -730,31 +728,31 @@
 .power-play-overlay {
   position: relative;
   z-index: 5;
-  padding: 24px;
+  padding: 18px;
   color: #ffffff;
 }
 
 .power-play-btn {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: #f5811f;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 200px;
-  font-size: 18px;
+  margin-bottom: 150px;
+  font-size: 16px;
 }
 
 .power-card-name {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   margin: 0;
 }
 
 .power-card-role {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   margin: 0;
 }
