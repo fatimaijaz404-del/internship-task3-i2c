@@ -3,6 +3,8 @@ import reliableImg from '../assets/Reliable-Payment-Platform.webp'
 import integratedImg from '../assets/Integrated-Financial-Platform.webp'
 import customerImg from '../assets/Customer-Centric-Banking-Solutions.webp'
 import video1 from '../assets/6565541-hd_1080_1920_25fps.mp4'
+import video2 from '../assets/7581173-hd_1080_1920_30fps.mp4'
+import video3 from '../assets/7643854-uhd_2160_4096_25fps.mp4'
 
 const STATS = [
   {
@@ -28,8 +30,8 @@ const STATS = [
 function GrowthSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const statRefs = useRef([])
-  const [isPlaying, setIsPlaying] = useState(false)
-  const videoRef = useRef(null)
+  const [playingIndex, setPlayingIndex] = useState(null)
+  const videoRefs = useRef([])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,9 +53,9 @@ function GrowthSection() {
     return () => observer.disconnect()
   }, [])
 
-  const handlePlay = () => {
-    setIsPlaying(true)
-    videoRef.current?.play()
+  const handlePlay = (index) => {
+    setPlayingIndex(index)
+    videoRefs.current[index]?.play()
   }
 
   return (
@@ -116,19 +118,32 @@ function GrowthSection() {
           </p>
 
           <div className="power-cards">
-            <div className="power-card power-card-light">
-              <p>Bridging the gap between global payments and everyday banking.</p>
-            </div>
-
-            <div className="power-card power-card-video" onClick={handlePlay}>
+            <div className="power-card power-card-video" onClick={() => handlePlay(0)}>
               <video
-                ref={videoRef}
+                ref={(el) => (videoRefs.current[0] = el)}
                 src={video1}
                 className="power-card-video-el"
-                controls={isPlaying}
+                controls={playingIndex === 0}
                 playsInline
               />
-              {!isPlaying && (
+              {playingIndex !== 0 && (
+                <div className="power-play-overlay">
+                  <div className="power-play-btn">▶</div>
+                  <p className="power-card-name">Bridging the gap</p>
+                  <p className="power-card-role">between global payments and everyday banking</p>
+                </div>
+              )}
+            </div>
+
+            <div className="power-card power-card-video" onClick={() => handlePlay(1)}>
+              <video
+                ref={(el) => (videoRefs.current[1] = el)}
+                src={video2}
+                className="power-card-video-el"
+                controls={playingIndex === 1}
+                playsInline
+              />
+              {playingIndex !== 1 && (
                 <div className="power-play-overlay">
                   <div className="power-play-btn">▶</div>
                   <p className="power-card-name">Fillipo Alario</p>
@@ -137,9 +152,21 @@ function GrowthSection() {
               )}
             </div>
 
-            <div className="power-card power-card-light">
-              <p>Powering people who fuel the economy.</p>
-              <span className="power-card-brand">payactiv</span>
+            <div className="power-card power-card-video" onClick={() => handlePlay(2)}>
+              <video
+                ref={(el) => (videoRefs.current[2] = el)}
+                src={video3}
+                className="power-card-video-el"
+                controls={playingIndex === 2}
+                playsInline
+              />
+              {playingIndex !== 2 && (
+                <div className="power-play-overlay">
+                  <div className="power-play-btn">▶</div>
+                  <p className="power-card-name">Powering people</p>
+                  <p className="power-card-role">who fuel the economy | payactiv</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
