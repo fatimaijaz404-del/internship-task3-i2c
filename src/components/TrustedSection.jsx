@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import './TrustedSection.css'
 
 import trustedImg from '../assets/Trusted-Banking-and-Payments-Platform.webp'
 import agileImg from '../assets/Agile-Payment-Platform.webp'
