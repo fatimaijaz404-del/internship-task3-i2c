@@ -9,6 +9,7 @@ import GrowthSection from './components/GrowthSection'
 import DifferentiationSection from "./components/DifferentiationSection";
 import ComprehensiveSection from './components/ComprehensiveSection'
 import EstablishedSection from './components/EstablishedSection'
+import TrustedSection from './components/TrustedSection'
 
 // ... baaki jo sections hain unko bhi import karein
 
@@ -26,6 +27,7 @@ function App() {
         <DifferentiationSection />
         <ComprehensiveSection />  
         <EstablishedSection />  
+        <TrustedSection />
         {/* Agle sections yahan andar aayenge, jaise: */}
         {/* <NextSection /> */}
         {/* <AnotherSection /> */}
