@@ -564,22 +564,60 @@
 
 .growth-stats-under {
   margin-top: 24px;
-  max-width: 450px;
+  max-width: 400px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid #d1d5db;
+}
+
+.growth-stat-line-item {
+  margin-bottom: 32px;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+}
+
+.growth-stat-line-item.active {
+  opacity: 1;
+}
+
+.growth-stat-line-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+  margin-top: 6px;
+}
+
+.growth-stat-line-item.active::before {
+  background: #2b4bff;
 }
 
 .growth-stat-number-small {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 36px;
-  color: #2b4bff;
+  font-size: 32px;
+  color: rgb(27, 34, 58);
   margin: 0 0 4px;
+  transition: color 0.3s ease;
+}
+
+.growth-stat-line-item.active .growth-stat-number-small {
+  color: #2b4bff;
 }
 
 .growth-stat-label-small {
   font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  color: #2b4bff;
+  font-size: 14px;
+  color: rgb(27, 34, 58);
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.growth-stat-line-item.active .growth-stat-label-small {
+  color: #2b4bff;
 }
 
 .growth-right {

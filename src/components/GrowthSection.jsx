@@ -74,8 +74,15 @@ function GrowthSection() {
         </div>
 
         <div className="growth-stats-under">
-          <p className="growth-stat-number-small">{STATS[activeIndex].stat}</p>
-          <p className="growth-stat-label-small">{STATS[activeIndex].statLabel}</p>
+          {STATS.map((item, index) => (
+            <div
+              key={index}
+              className={`growth-stat-line-item ${index === activeIndex ? 'active' : ''}`}
+            >
+              <p className="growth-stat-number-small">{item.stat}</p>
+              <p className="growth-stat-label-small">{item.statLabel}</p>
+            </div>
+          ))}
         </div>
       </div>
 
