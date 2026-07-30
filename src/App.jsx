@@ -8,6 +8,7 @@ import StickyFooterNav from './components/StickyFooterNav'
 import GrowthSection from './components/GrowthSection'
 import DifferentiationSection from "./components/DifferentiationSection";
 import ComprehensiveSection from './components/ComprehensiveSection'
+import EstablishedSection from './components/EstablishedSection'
 
 // ... baaki jo sections hain unko bhi import karein
 
@@ -24,6 +25,7 @@ function App() {
 
         <DifferentiationSection />
         <ComprehensiveSection />  
+        <EstablishedSection />  
         {/* Agle sections yahan andar aayenge, jaise: */}
         {/* <NextSection /> */}
         {/* <AnotherSection /> */}
