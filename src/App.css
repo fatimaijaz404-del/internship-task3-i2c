@@ -850,13 +850,23 @@
 }
 
 .diff-heading {
-  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 90px;
+  line-height: 90px;
+  color: rgb(255, 255, 255);
   text-align: center;
-  font-weight: 700;
-  line-height: 1.15;
-  font-size: clamp(2.2rem, 5.5vw, 4.5rem);
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.diff-heading-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .diff-dot {
@@ -865,32 +875,16 @@
 
 /* Tablet */
 @media (max-width: 768px) {
-  .diff-section {
-    padding: 2rem 1.5rem;
-  }
-
-  .diff-box,
-  .diff-overlay {
-    min-height: 420px;
-  }
-
   .diff-heading {
-    font-size: clamp(1.8rem, 7vw, 3rem);
+    font-size: 48px;
+    line-height: 56px;
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-  .diff-section {
-    padding: 1.5rem 1rem;
-  }
-
-  .diff-box,
-  .diff-overlay {
-    min-height: 340px;
-  }
-
-  .diff-overlay {
-    padding: 1.25rem;
+  .diff-heading {
+    font-size: 32px;
+    line-height: 40px;
   }
 }
