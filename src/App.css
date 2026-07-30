@@ -566,6 +566,7 @@
 
 .growth-stats-under {
   margin-top: 24px;
+  margin-left: 96px;
   max-width: 400px;
   position: relative;
   padding-left: 24px;
@@ -574,13 +575,12 @@
 .growth-stats-under::before {
   content: '';
   position: absolute;
-  left: 4px;
+  left: 12px;
   top: 6px;
   bottom: 6px;
   width: 2px;
   background: #d1d5db;
 }
-
 .growth-stat-line-item {
   position: relative;
   margin-bottom: 32px;
