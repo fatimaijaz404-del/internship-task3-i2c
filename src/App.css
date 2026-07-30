@@ -1124,7 +1124,8 @@
   min-height: 280px;
   border-radius: 16px;
   overflow: hidden;
-  background: #f0f2f6;
+  background: #000;
+  cursor: pointer;
 }
 
 .gears-video {
@@ -1135,43 +1136,41 @@
   inset: 0;
 }
 
-.gears-overlay {
+.gears-thumb-overlay {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.55) 100%);
+  background: rgba(56, 189, 248, 0.55); /* sky blue tint */
+  z-index: 2;
+  transition: opacity 0.4s ease;
+  opacity: 1;
 }
 
-.gears-play-btn {
-  align-self: flex-start;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  background: #f58220;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.gears-thumb-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .gears-quote {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+  z-index: 3;
+  text-align: right;
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  color: #1b223a;
-  background: #fff;
-  padding: 12px 14px;
-  border-radius: 8px;
+  font-weight: 600;
+  font-size: 17px;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
   margin: 0;
 }
 
 .gears-footer {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -1182,17 +1181,19 @@
   font-weight: 600;
   font-size: 14px;
   margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .gears-role {
   font-weight: 400;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .gears-company {
   color: #fff;
   font-weight: 700;
   font-size: 13px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 768px) {

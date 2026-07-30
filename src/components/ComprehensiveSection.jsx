@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import './ComprehensiveSection.css'
+
 import configurableImg from '../assets/Comprehensive-Composable-Platform.webp'
 import innovativeImg from '../assets/Innovative-Financial-Platform.webp'
 import configPaymentsImg from '../assets/Configurable-Payments-Platform.webp'
