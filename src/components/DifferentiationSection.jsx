@@ -6,21 +6,21 @@ function DifferentiationSection() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
+    },
+    { threshold: 0.2, rootMargin: "-150px 0px -150px 0px" }
+  );
 
-    if (headingRef.current) {
-      observer.observe(headingRef.current);
-    }
+  if (headingRef.current) {
+    observer.observe(headingRef.current);
+  }
 
-    return () => observer.disconnect();
-  }, []);
+  return () => observer.disconnect();
+}, []);
 
   return (
     <section className="diff-section">
