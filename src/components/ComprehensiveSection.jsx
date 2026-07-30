@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
+import './ComprehensiveSection.css'
 import configurableImg from '../assets/Comprehensive-Composable-Platform.webp'
 import innovativeImg from '../assets/Innovative-Financial-Platform.webp'
 import configPaymentsImg from '../assets/Configurable-Payments-Platform.webp'
+import gearsVideo1 from '../assets/6565541-hd_1080_1920_25fps.mp4'
+import gearsVideo2 from '../assets/7581173-hd_1080_1920_30fps.mp4'
+import gearsVideo3 from '../assets/7643854-uhd_2160_4096_25fps.mp4'
 
 const STATS = [
   {
@@ -24,8 +28,33 @@ const STATS = [
   },
 ]
 
+const GEARS = [
+  {
+    quote: 'Complete, tailored credit card programs aligned for businesses.',
+    name: 'Jim Glatiotis',
+    role: 'Chief Technical Officer',
+    company: 'Jassby',
+    video: gearsVideo1,
+  },
+  {
+    quote: 'Real crypto utility at global scale.',
+    name: 'Todd Crosland',
+    role: 'CEO',
+    company: 'CoinZoom',
+    video: gearsVideo2,
+  },
+  {
+    quote: 'Powering small businesses with industry-tailored credit cards.',
+    name: 'Aaron Bai',
+    role: 'CEO',
+    company: 'Affiniti Finance',
+    video: gearsVideo3,
+  },
+]
+
 function ComprehensiveSection() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [playingIndex, setPlayingIndex] = useState(null)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,6 +92,48 @@ function ComprehensiveSection() {
           <button className="comprehensive-explore-btn">
             See How It Works <span>↗</span>
           </button>
+        </div>
+
+        <div className="gears-block">
+          <h3 className="gears-heading">Shift gears, not momentum.</h3>
+          <p className="gears-paragraph">
+            Watch how i2c helps these visionaries outpace the ever-evolving banking
+            and payments market, regulatory and customer demand drivers, backed by
+            active/active resiliency that keeps innovation—and business—moving.
+          </p>
+
+          <div className="gears-cards">
+            {GEARS.map((item, index) => (
+              <div className="gears-card" key={index}>
+                <video
+                  src={item.video}
+                  className="gears-video"
+                  controls={playingIndex === index}
+                  playsInline
+                />
+
+                {playingIndex !== index && (
+                  <div className="gears-overlay">
+                    <button
+                      className="gears-play-btn"
+                      onClick={() => setPlayingIndex(index)}
+                      aria-label="Play video"
+                    >
+                      ▶
+                    </button>
+                    <p className="gears-quote">{item.quote}</p>
+                    <div className="gears-footer">
+                      <p className="gears-name">
+                        {item.name}
+                        <span className="gears-role"> {item.role}</span>
+                      </p>
+                      <span className="gears-company">{item.company}</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
