@@ -553,7 +553,9 @@
 .growth-image-label {
   position: absolute;
   bottom: 40px;
-  left: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -566,11 +568,21 @@
   margin-top: 24px;
   max-width: 400px;
   position: relative;
-  padding-left: 20px;
-  border-left: 2px solid #d1d5db;
+  padding-left: 24px;
+}
+
+.growth-stats-under::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #d1d5db;
 }
 
 .growth-stat-line-item {
+  position: relative;
   margin-bottom: 32px;
   transition: opacity 0.3s ease;
   opacity: 0.4;
@@ -583,12 +595,13 @@
 .growth-stat-line-item::before {
   content: '';
   position: absolute;
-  left: -6px;
+  left: -25px;
+  top: 8px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #d1d5db;
-  margin-top: 6px;
+  z-index: 2;
 }
 
 .growth-stat-line-item.active::before {
@@ -619,7 +632,6 @@
 .growth-stat-line-item.active .growth-stat-label-small {
   color: #2b4bff;
 }
-
 .growth-right {
   flex: 1 1 600px;
 }

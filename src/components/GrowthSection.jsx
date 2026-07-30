@@ -29,28 +29,14 @@ const STATS = [
 
 function GrowthSection() {
   const [activeIndex, setActiveIndex] = useState(0)
-  const statRefs = useRef([])
   const [playingIndex, setPlayingIndex] = useState(null)
   const videoRefs = useRef([])
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = Number(entry.target.dataset.index)
-            setActiveIndex(index)
-          }
-        })
-      },
-      { threshold: 0, rootMargin: '-45% 0px -45% 0px' }
-    )
-
-    statRefs.current.forEach((el) => {
-      if (el) observer.observe(el)
-    })
-
-    return () => observer.disconnect()
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % STATS.length)
+    }, 3000)
+    return () => clearInterval(interval)
   }, [])
 
   const handlePlay = (index) => {
@@ -177,15 +163,6 @@ function GrowthSection() {
             </div>
           </div>
         </div>
-
-        {STATS.map((item, index) => (
-          <div
-            key={index}
-            className="growth-stat-block"
-            data-index={index}
-            ref={(el) => (statRefs.current[index] = el)}
-          />
-        ))}
       </div>
     </section>
   )
