@@ -1677,22 +1677,17 @@
 }
 
 /* ---------- CTA Section ---------- */
-.cta-section {
+..cta-section {
   position: relative;
   width: 100%;
   min-height: 500px;
-  overflow: hidden;
+  background: #ffffff;
   margin: 3rem 0;
 }
 
-.cta-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
+/* .cta-bg ab zaroorat nahi, is rule ko hata dein */
+
+
 
 .cta-overlay {
   position: relative;

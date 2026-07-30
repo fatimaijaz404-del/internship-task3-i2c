@@ -16,20 +16,19 @@ function AwardCTASection() {
       </section>
 
       <section className="cta-section">
-        <img src={ctaBg} alt="" className="cta-bg" />
-        <div className="cta-overlay">
-          <h2 className="cta-heading">
-            Let's power innovation together<span className="cta-dot">.</span>
-          </h2>
-          <p className="cta-subtext">
-            Say goodbye to outdated systems and risky leaps and move to a
-            powerful platform and best-in-class solutions today.
-          </p>
-          <button className="cta-btn">
-            Get Started <span>↗</span>
-          </button>
-        </div>
-      </section>
+  <div className="cta-overlay">
+    <h2 className="cta-heading">
+      Let's power innovation together<span className="cta-dot">.</span>
+    </h2>
+    <p className="cta-subtext">
+      Say goodbye to outdated systems and risky leaps and move to a
+      powerful platform and best-in-class solutions today.
+    </p>
+    <button className="cta-btn">
+      Get Started <span>↗</span>
+    </button>
+  </div>
+</section>
     </>
   )
 }
