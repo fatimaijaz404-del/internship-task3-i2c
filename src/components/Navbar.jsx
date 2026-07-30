@@ -5,7 +5,7 @@ import serveImg from '../assets/configurable-building-blocks.webp'
 import doImg from '../assets/image-8.png'
 import differentImg from '../assets/supercharge-banking-and-payments.png'
 import areImg from '../assets/image-8.png'
-import knowImg from '../assets/Virtual-Event_PYMNTS_Emerging-Middle-Market.JPG'
+import knowImg from '../assets/Virtual-Event_PYMNTS_Emerging-Middle-Market.jpg'
 
 const NAV_ITEMS = [
   {
