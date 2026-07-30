@@ -33,15 +33,16 @@ function DifferentiationSection() {
 
         <div className="diff-overlay">
           <h2
-            ref={headingRef}
-            className={`diff-heading ${isVisible ? "diff-heading-visible" : ""}`}
-          >
-            Designed for differentiation
-            <span className="diff-dot">.</span>
-            <br />
-            Configured for control
-            <span className="diff-dot">.</span>
-          </h2>
+  ref={headingRef}
+  className={`diff-heading ${isVisible ? "diff-heading-visible" : ""}`}
+>
+  <span className="diff-line">
+    Designed for differentiation<span className="diff-dot">.</span>
+  </span>
+  <span className="diff-line">
+    Configured for control<span className="diff-dot">.</span>
+  </span>
+</h2>
         </div>
       </div>
     </section>
