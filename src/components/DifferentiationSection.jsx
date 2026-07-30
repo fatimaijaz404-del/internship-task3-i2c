@@ -21,7 +21,6 @@ function DifferentiationSection() {
 
   return () => observer.disconnect();
 }, []);
-
   return (
     <section className="diff-section">
       <div className="diff-box">
