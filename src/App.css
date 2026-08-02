@@ -1643,7 +1643,7 @@
 .shift-thumb-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(56, 189, 248, 0.55);
+  background: #cce6ff;
   z-index: 2;
   transition: opacity 0.4s ease;
   opacity: 1;
@@ -1664,8 +1664,8 @@
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 17px;
-  color: #ffffff;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+  color: rgb(27, 34, 58);
+  text-shadow: none;
   margin: 0;
 }
 
@@ -1681,11 +1681,11 @@
 }
 
 .shift-name {
-  color: #fff;
+  color: rgb(27, 34, 58);
   font-weight: 600;
   font-size: 14px;
   margin: 0;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: none;
 }
 
 .shift-role {
@@ -1694,10 +1694,10 @@
 }
 
 .shift-company {
-  color: #fff;
+  color: rgb(27, 34, 58);
   font-weight: 700;
   font-size: 13px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: none;
 }
 
 @media (max-width: 768px) {
