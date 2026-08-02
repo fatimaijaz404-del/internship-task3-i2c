@@ -23,7 +23,7 @@ function EstablishedSection() {
   }, []);
 
   return (
-    <section className="established-section">
+    <section className="established-section" id="established-section">
       <div className="established-box">
         <img
           src={bgImage}

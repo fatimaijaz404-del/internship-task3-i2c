@@ -20,7 +20,7 @@ function EngineeredSection() {
   }, [])
 
   return (
-    <section className="engineered-section" ref={sectionRef}>
+    <section className="engineered-section" id="engineered-section" ref={sectionRef}>
       <img src={bgImage} alt="Engineered for efficiency" className="engineered-bg" />
 
       <h2

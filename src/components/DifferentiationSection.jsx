@@ -22,7 +22,7 @@ function DifferentiationSection() {
   return () => observer.disconnect();
 }, []);
   return (
-    <section className="diff-section">
+    <section className="diff-section" id="differentiation-section">
       <div className="diff-box">
         <img
           src={bgImage}

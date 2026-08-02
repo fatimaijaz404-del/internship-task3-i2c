@@ -62,7 +62,7 @@ function GrowthSection() {
   }
 
   return (
-    <section className="growth-section">
+    <section className="growth-section" id="growth-section">
       <div className="growth-left">
         <div className="growth-image-wrapper">
           {STATS.map((item, index) => (

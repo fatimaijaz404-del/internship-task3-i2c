@@ -64,7 +64,7 @@ function ComprehensiveSection() {
   }, [])
 
   return (
-    <section className="comprehensive-section">
+    <section className="comprehensive-section" id="comprehensive-section">
       <div className="comprehensive-left">
         <h2 className="comprehensive-heading">
           Comprehensive, composable solutions that quickly respond
