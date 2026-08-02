@@ -1338,6 +1338,32 @@
   font-size: 13px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
+.gears-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  padding: 18px;
+  background-color: #cce6ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .gears-card:nth-child(1) .gears-overlay {
+  background-color: #f6f6f6;
+}
+
+.gears-card:nth-child(2) .gears-overlay {
+  background-color: #e7e7e7;
+}
+}
+
+.gears-quote-top {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(27, 34, 58);
+  margin: 0;
+  line-height: 1.4;
+}
 
 @media (max-width: 768px) {
   .gears-cards {

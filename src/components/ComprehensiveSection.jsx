@@ -6,6 +6,9 @@ import configPaymentsImg from '../assets/Configurable-Payments-Platform.webp'
 import gearsVideo1 from '../assets/6565541-hd_1080_1920_25fps.mp4'
 import gearsVideo2 from '../assets/7581173-hd_1080_1920_30fps.mp4'
 import gearsVideo3 from '../assets/7643854-uhd_2160_4096_25fps.mp4'
+import jassbyLogo from '../assets/Jassby-Logo.svg'
+import coinzoomLogo from '../assets/CoinZoom-Logo.svg'
+import affinitiLogo from '../assets/Affiniti-logo.svg'
 
 const STATS = [
   {
@@ -35,6 +38,7 @@ const GEARS = [
     role: 'Chief Technical Officer',
     company: 'Jassby',
     video: gearsVideo1,
+    logo: jassbyLogo,
   },
   {
     quote: 'Real crypto utility at global scale.',
@@ -42,6 +46,7 @@ const GEARS = [
     role: 'CEO',
     company: 'CoinZoom',
     video: gearsVideo2,
+    logo: coinzoomLogo,
   },
   {
     quote: 'Powering small businesses with industry-tailored credit cards.',
@@ -49,6 +54,7 @@ const GEARS = [
     role: 'CEO',
     company: 'Affiniti Finance',
     video: gearsVideo3,
+    logo: affinitiLogo,
   },
 ]
 
@@ -104,32 +110,46 @@ function ComprehensiveSection() {
 
           <div className="gears-cards">
             {GEARS.map((item, index) => (
-              <div className="gears-card" key={index}>
+              <div
+                className="gears-card"
+                key={index}
+                onMouseEnter={() => setPlayingIndex(index)}
+                onMouseLeave={() => setPlayingIndex(null)}
+                onClick={() =>
+                  setPlayingIndex(playingIndex === index ? null : index)
+                }
+              >
                 <video
                   src={item.video}
                   className="gears-video"
-                  controls={playingIndex === index}
+                  muted
+                  loop
                   playsInline
                 />
 
-                {playingIndex !== index && (
+                {playingIndex !== index ? (
                   <div className="gears-overlay">
-                    <button
-                      className="gears-play-btn"
-                      onClick={() => setPlayingIndex(index)}
-                      aria-label="Play video"
-                    >
-                      ▶
-                    </button>
-                    <p className="gears-quote">{item.quote}</p>
-                    <div className="gears-footer">
-                      <p className="gears-name">
-                        {item.name}
-                        <span className="gears-role"> {item.role}</span>
-                      </p>
-                      <span className="gears-company">{item.company}</span>
-                    </div>
+                    <p className="gears-quote-top">{item.quote}</p>
+                    <img
+                      src={item.logo}
+                      alt={item.company}
+                      className="power-card-logo power-card-logo-bottom"
+                    />
                   </div>
+                ) : (
+                  <>
+                    <img
+                      src={item.logo}
+                      alt={item.company}
+                      className="power-card-logo power-card-logo-top"
+                    />
+                    <div className="power-play-info">
+                      <p className="power-card-name">{item.name}</p>
+                      <p className="power-card-role">
+                        {item.role} | {item.company}
+                      </p>
+                    </div>
+                  </>
                 )}
               </div>
             ))}
