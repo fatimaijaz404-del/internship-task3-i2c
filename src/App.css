@@ -2159,3 +2159,343 @@
     justify-content: flex-start;
   }
 }
+
+
+/* ==========================================================
+   GLOBAL MOBILE RESPONSIVE FIXES
+   ========================================================== */
+
+@media (max-width: 1024px) {
+  /* Navbar */
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .navbar-left {
+    gap: 20px;
+  }
+
+  .navbar-links {
+    display: none; /* agar hamburger menu already hai to yeh sahi hai */
+  }
+
+  .mega-menu {
+    padding: 24px 20px;
+  }
+
+  .mega-menu-body {
+    flex-direction: column;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 60px 24px 40px;
+  }
+
+  .hero-triangle,
+  .hero-right {
+    max-width: 100%;
+  }
+
+  /* Video Section */
+  .video-heading {
+    left: 24px;
+    right: 24px;
+    max-width: 100%;
+    font-size: 28px;
+    line-height: 34px;
+    bottom: 40px;
+  }
+
+  .video-thumb-card {
+    top: 20px;
+    left: 20px;
+  }
+
+  /* Engineered Section */
+  .engineered-section {
+    width: calc(100% - 48px);
+    padding: 0 20px;
+    margin: 80px auto 0;
+  }
+
+  .engineered-bg {
+    height: 420px;
+  }
+
+  .engineered-heading {
+    font-size: 36px;
+    line-height: 42px;
+    padding: 0 20px;
+  }
+
+  .engineered-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+  }
+
+  .engineered-nav-item {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Comprehensive Section */
+  .comprehensive-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 24px;
+    margin: 60px auto;
+  }
+
+  .comprehensive-right {
+    position: static;
+    width: 100%;
+  }
+
+  .comprehensive-image-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .comprehensive-stats-under {
+    margin-left: 0;
+    max-width: 100%;
+    padding-left: 24px;
+  }
+
+  .comprehensive-heading {
+    font-size: 32px;
+  }
+
+  .comprehensive-cards {
+    flex-direction: column;
+  }
+
+  .gears-cards {
+    flex-direction: column;
+  }
+
+  /* Award / CTA */
+  .cta-heading {
+    padding: 0 20px;
+  }
+
+  .cta-subtext {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    border-radius: 0 0 16px 16px;
+  }
+
+  .navbar-right .btn-outline {
+    display: none; /* Client Login chhupao chote screen pe agar space na ho */
+  }
+
+  /* Hero heading — nowrap tootne se bachao */
+  .hero-heading {
+    font-size: clamp(26px, 8vw, 40px);
+    letter-spacing: -0.01em;
+  }
+
+  .hero-heading-line {
+    white-space: normal;
+  }
+
+  .hero-tags {
+    font-size: 16px;
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  /* Video Section */
+  .video-section {
+    height: 380px;
+  }
+
+  .video-heading {
+    font-size: 22px;
+    line-height: 28px;
+    bottom: 24px;
+  }
+
+  .video-thumb-card {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .video-thumb-card img {
+    width: 60px;
+    height: 42px;
+  }
+
+  .video-thumb-text {
+    font-size: 12px;
+  }
+
+  /* Engineered */
+  .engineered-bg {
+    height: 320px;
+  }
+
+  .engineered-heading {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .engineered-nav-wrapper {
+    bottom: 16px;
+  }
+
+  /* Trusted Section already has its own @media block, extra tweaks: */
+  .trusted-heading {
+    font-size: 28px;
+  }
+
+  .trusted-stats-under {
+    margin-left: 0;
+    padding-left: 24px;
+  }
+
+  .trusted-cards {
+    flex-direction: column;
+  }
+
+  /* Award banner text */
+  .award-trophy {
+    width: 60px;
+  }
+
+  /* CTA */
+  .cta-section {
+    min-height: 400px;
+  }
+
+  .cta-overlay {
+    min-height: 400px;
+  }
+
+  .cta-subtext {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .btn-filled {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 40px 16px 30px;
+  }
+
+  .hero-heading {
+    font-size: 26px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Video */
+  .video-section {
+    height: 300px;
+  }
+
+  .video-heading {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .video-thumb-card {
+    display: none; /* chote screen pe clutter kam karne ke liye */
+  }
+
+  /* Engineered */
+  .engineered-bg {
+    height: 260px;
+    border-radius: 16px;
+  }
+
+  .engineered-heading {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .engineered-nav-item {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  /* Comprehensive */
+  .comprehensive-heading {
+    font-size: 24px;
+  }
+
+  .comprehensive-footer-text h3 {
+    font-size: 20px;
+  }
+
+  .comprehensive-explore-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Trusted */
+  .trusted-heading {
+    font-size: 22px;
+  }
+
+  .shift-heading {
+    font-size: 22px;
+  }
+
+  .shift-paragraph {
+    font-size: 16px;
+  }
+
+  /* Award */
+  .award-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .award-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CTA */
+  .cta-heading {
+    font-size: 26px !important;
+  }
+
+  .cta-subtext {
+    font-size: 16px;
+  }
+}
