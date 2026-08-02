@@ -128,8 +128,8 @@ function ComprehensiveSection() {
                 />
 
                 {playingIndex !== index ? (
-                  <div className="gears-overlay">
-                    <p className="gears-quote-top">{item.quote}</p>
+  <div className={`gears-overlay gears-overlay-${index}`}>
+    <p className="gears-quote-top">{item.quote}</p>
                     <img
                       src={item.logo}
                       alt={item.company}
