@@ -1996,8 +1996,11 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 24px 80px 40px;
-  background: #eaf1ff;
+  margin: 0 80px 40px;
+  padding: 32px 48px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #eaf1ff 0%, #f7faff 60%, #ffffff 100%);
+  box-shadow: 0 4px 24px rgba(27, 34, 58, 0.06);
 }
 
 .footer-bottom-left {
