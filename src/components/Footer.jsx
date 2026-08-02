@@ -2,6 +2,7 @@ import logo from '../assets/Group-1171278021.png'
 import footerPerson1 from '../assets/Innovative-Financial-Platform.webp'
 import footerPerson2 from '../assets/Trusted-Experience-small.webp';
 import insideTrackLogo from '../assets/inside-track-logo-1.png'
+import { Linkedin, Instagram } from 'lucide-react'
 function Footer() {
   return (
     <footer className="site-footer">
@@ -117,10 +118,10 @@ function Footer() {
 
         <div className="footer-bottom-right">
           <div className="footer-social">
-            <span>Follow Us</span>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Instagram">◎</a>
-          </div>
+  <span>Follow Us</span>
+  <a href="#" aria-label="LinkedIn"><Linkedin size={16} /></a>
+  <a href="#" aria-label="Instagram"><Instagram size={16} /></a>
+</div>
           <div className="footer-legal">
             <p>Copyright © 2026 i2c Inc. All Rights Reserved.</p>
             <div className="footer-legal-links">
