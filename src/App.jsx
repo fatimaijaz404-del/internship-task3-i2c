@@ -11,6 +11,7 @@ import ComprehensiveSection from './components/ComprehensiveSection'
 import EstablishedSection from './components/EstablishedSection'
 import TrustedSection from './components/TrustedSection'
 import AwardCTASection from './components/AwardCTASection'
+import Footer from './components/Footer'
 
 // ... baaki jo sections hain unko bhi import karein
 
@@ -32,6 +33,8 @@ function App() {
                 <StickyFooterNav />
 
         <AwardCTASection /> 
+         <Footer />
+         
         {/* Agle sections yahan andar aayenge, jaise: */}
         {/* <NextSection /> */}
         {/* <AnotherSection /> */}
