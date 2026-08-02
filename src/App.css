@@ -2106,31 +2106,6 @@
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1024px) {
-  .footer-top {
-    padding: 50px 40px 80px;
-  }
-
-  .footer-columns {
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-
-  .footer-col {
-    flex: 1 1 45%;
-  }
-
-  .footer-person {
-    display: none;
-  }
-
-  .footer-newsletter,
-  .footer-bottom {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
 @media (max-width: 640px) {
   .footer-top {
     padding: 40px 24px 60px;
@@ -2151,6 +2126,26 @@
     align-items: flex-start;
     padding-left: 24px;
     padding-right: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .footer-newsletter-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .footer-newsletter-text {
+    width: 100%;
+  }
+
+  .footer-bottom-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
   }
 
   .footer-subscribe-btn {
@@ -2171,7 +2166,6 @@
     justify-content: flex-start;
   }
 }
-
 
 /* ==========================================================
    GLOBAL MOBILE RESPONSIVE FIXES
