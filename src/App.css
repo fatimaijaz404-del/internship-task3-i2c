@@ -1949,10 +1949,11 @@
   flex-wrap: wrap;
   gap: 20px;
   background: #ffffff;
-  border-top: 1px solid #e5e9f2;
-  border-bottom: 1px solid #e5e9f2;
-  padding: 24px 80px;
-  box-shadow: 0 -4px 20px rgba(27, 34, 58, 0.04);
+  border: none;
+  border-radius: 20px;
+  margin: 0 80px 40px;
+  padding: 32px 48px;
+  box-shadow: 0 4px 24px rgba(27, 34, 58, 0.08);
 }
 
 .footer-newsletter-logo {
@@ -1996,7 +1997,7 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 24px 80px 40px;
-  background: #ffffff;
+  background: #eaf1ff;
 }
 
 .footer-bottom-left {
@@ -2006,7 +2007,7 @@
 }
 
 .footer-logo {
-  width: 44px;
+  width: 68px;
   height: auto;
 }
 
