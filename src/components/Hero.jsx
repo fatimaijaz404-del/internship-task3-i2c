@@ -25,10 +25,9 @@ function Hero() {
     <section className="hero">
       <div className="hero-left">
         <h1 className="hero-heading">
-          Powered by innovation<span className="heading-dot">.</span><br />
-          Driven by trust<span className="heading-dot">.</span>
-        </h1>
-
+  <span className="hero-heading-line">Powered by innovation<span className="heading-dot">.</span></span>
+  <span className="hero-heading-line">Driven by trust<span className="heading-dot">.</span></span>
+</h1>
         <div className="hero-tags">
           {TAGS.map((tag, index) => (
             <span key={tag}>
@@ -39,12 +38,12 @@ function Hero() {
         </div>
 
         <p className="hero-desc">
-  We deliver bold innovation with rock-solid reliability to
+  i2c delivers bold innovation with rock-solid reliability to
   supercharge your banking and payments platform. Our unified
-  global platform and composable building-block solutions help
-  you modernize with ease. Trusted by leading banks and fintechs
-  worldwide to scale securely and accelerate growth.
-            </p>
+  global platform, composable building-block solutions and
+  trusted ingenuity help you ditch the legacy dinosaurs and
+  modern daredevils, scale steady and accelerate profits with ease.
+</p>
 
         <button className="hero-btn">Contact Us →</button>
       </div>

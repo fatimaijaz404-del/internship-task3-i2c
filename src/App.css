@@ -177,7 +177,7 @@
 
 .hero-left {
   flex: 1 1 500px;
-  max-width: 650px;
+  max-width: 700px;
 }
 
 .hero-right {
@@ -188,7 +188,7 @@
 }
 
 .hero-btn {
-  background-color: #1a2f6b;
+  background-color: #0d227f;
   color: #ffffff;
   border: none;
   padding: 14px 28px;
@@ -203,17 +203,21 @@
 }
 
 .hero-btn:hover {
-  background-color: #142556;
+  background-color: #0a1a63;   /* thora aur dark hover ke liye */
 }
 
 .hero-heading {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: clamp(36px, 5vw, 72px);
-  line-height: 0.95;
+   font-size: clamp(28px, 5vw, 72px);
+  line-height: 1.05;
   color: rgb(27, 34, 58);
   margin: 8px 0;
-  letter-spacing: -4px;
+  letter-spacing: -0.02em;
+}
+
+.hero-heading-line {
+  white-space: nowrap;
 }
 
 .hero-tags {
@@ -246,7 +250,7 @@
   font-size: 20px;
   line-height: 26px;
   color: rgb(27, 34, 58);
-  max-width: 460px;
+  max-width: 600px;   /* pehle 460px tha */
   margin-bottom: 24px;
 }
 
