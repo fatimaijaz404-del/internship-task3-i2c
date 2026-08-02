@@ -1,4 +1,4 @@
-import logo from '../assets/i2c-logo.webp'
+import logo from '../assets/Group-1171278021.png'
 import footerPerson1 from '../assets/fInnovative-Financial-Platform.webp'
 import footerPerson2 from '../Trusted-Experience-small.webp'
 import insideTrackLogo from '../assets/inside-track-logo-1.png'
