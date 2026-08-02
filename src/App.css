@@ -217,6 +217,7 @@
 }
 
 .hero-heading-line {
+  display: block;
   white-space: nowrap;
 }
 
