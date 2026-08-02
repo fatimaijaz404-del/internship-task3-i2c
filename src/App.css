@@ -2519,3 +2519,81 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 768px) {
+  .engineered-nav-wrapper {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    justify-content: center;
+  }
+
+  .engineered-nav {
+    width: 100%;
+    max-width: 400px;
+    justify-content: space-between;
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .engineered-nav-item {
+    font-size: 13px;
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .engineered-nav {
+    padding: 5px;
+    gap: 2px;
+  }
+
+  .engineered-nav-item {
+    font-size: 11px;
+    padding: 7px 8px;
+  }
+}
+/* Car drive-in animation */
+.cta-car {
+  position: absolute;
+  top: 50%;
+  left: -300px;
+  width: 220px;
+  height: auto;
+  transform: translateY(-50%);
+  z-index: 2;
+  animation: driveAcross 2.5s ease-in-out forwards;
+}
+
+@keyframes driveAcross {
+  0% {
+    left: -300px;
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+/* Text fade-in after car passes */
+.cta-overlay {
+  opacity: 0;
+  animation: fadeInText 0.8s ease forwards;
+  animation-delay: 2.3s;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

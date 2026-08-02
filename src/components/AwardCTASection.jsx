@@ -1,5 +1,6 @@
 import awardTrophy from '../assets/award-leading-vendor-768.webp'
 import ctaBg from '../assets/awards-bg-md1.webp'
+import carImage from '../assets/i2c-Powering-Innovation-Together.webp'
 
 function AwardCTASection() {
   return (
@@ -16,6 +17,8 @@ function AwardCTASection() {
       </section>
 
       <section className="cta-section">
+  <img src={carImage} alt="" className="cta-car" />
+
   <div className="cta-overlay">
     <h2 className="cta-heading">
       Let's power innovation together<span className="cta-dot">.</span>
