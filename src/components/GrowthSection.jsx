@@ -5,6 +5,9 @@ import customerImg from '../assets/Customer-Centric-Banking-Solutions.webp'
 import video1 from '../assets/6565541-hd_1080_1920_25fps.mp4'
 import video2 from '../assets/7581173-hd_1080_1920_30fps.mp4'
 import video3 from '../assets/7643854-uhd_2160_4096_25fps.mp4'
+import payactivLogo from '../assets/payactiv-logo.png'
+import belizeLogo from '../assets/Belize-bank-original-logo.png'
+import edgeLogo from '../assets/bb-americas-bank-seeklogo.svg'
 
 const STATS = [
   {
@@ -142,12 +145,28 @@ function GrowthSection() {
                 loop
                 playsInline
               />
-              {playingIndex !== 0 && (
+
+              {playingIndex !== 0 ? (
                 <div className="power-play-overlay">
-                  <div className="power-play-btn">▶</div>
-                  <p className="power-card-name">Bridging the gap</p>
-                  <p className="power-card-role">between global payments and everyday banking</p>
+                  <p className="power-card-quote">Powering people who fuel the economy.</p>
+                  <img
+                    src={payactivLogo}
+                    alt="Payactiv"
+                    className="power-card-logo power-card-logo-bottom"
+                  />
                 </div>
+              ) : (
+                <>
+                  <img
+                    src={payactivLogo}
+                    alt="Payactiv"
+                    className="power-card-logo power-card-logo-top"
+                  />
+                  <div className="power-play-info">
+                    <p className="power-card-name">Safwan Shah</p>
+                    <p className="power-card-role">CEO & Founder | Payactiv</p>
+                  </div>
+                </>
               )}
             </div>
 
@@ -165,12 +184,30 @@ function GrowthSection() {
                 loop
                 playsInline
               />
-              {playingIndex !== 1 && (
+
+              {playingIndex !== 1 ? (
                 <div className="power-play-overlay">
-                  <div className="power-play-btn">▶</div>
-                  <p className="power-card-name">Fillipo Alario</p>
-                  <p className="power-card-role">CEO | Belize Bank</p>
+                  <p className="power-card-quote">
+                    Rapid, nearly frictionless integration and launch of credit self-service.
+                  </p>
+                  <img
+                    src={belizeLogo}
+                    alt="Belize Bank"
+                    className="power-card-logo power-card-logo-bottom"
+                  />
                 </div>
+              ) : (
+                <>
+                  <img
+                    src={belizeLogo}
+                    alt="Belize Bank"
+                    className="power-card-logo power-card-logo-top"
+                  />
+                  <div className="power-play-info">
+                    <p className="power-card-name">Fillipo Alario</p>
+                    <p className="power-card-role">CEO | Belize Bank</p>
+                  </div>
+                </>
               )}
             </div>
 
@@ -188,12 +225,30 @@ function GrowthSection() {
                 loop
                 playsInline
               />
-              {playingIndex !== 2 && (
+
+              {playingIndex !== 2 ? (
                 <div className="power-play-overlay">
-                  <div className="power-play-btn">▶</div>
-                  <p className="power-card-name">Powering people</p>
-                  <p className="power-card-role">who fuel the economy | payactiv</p>
+                  <p className="power-card-quote">
+                    Bridging the gap between global payments and everyday banking.
+                  </p>
+                  <img
+                    src={edgeLogo}
+                    alt="Bank"
+                    className="power-card-logo power-card-logo-bottom"
+                  />
                 </div>
+              ) : (
+                <>
+                  <img
+                    src={edgeLogo}
+                    alt="Bank"
+                    className="power-card-logo power-card-logo-top"
+                  />
+                  <div className="power-play-info">
+                    <p className="power-card-name">Bridging the gap</p>
+                    <p className="power-card-role">between global payments and everyday banking</p>
+                  </div>
+                </>
               )}
             </div>
           </div>
