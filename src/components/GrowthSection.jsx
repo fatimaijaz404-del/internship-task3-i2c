@@ -39,9 +39,26 @@ function GrowthSection() {
     return () => clearInterval(interval)
   }, [])
 
-  const handlePlay = (index) => {
+  const handleInteractionStart = (index) => {
     setPlayingIndex(index)
     videoRefs.current[index]?.play()
+  }
+
+  const handleInteractionEnd = (index) => {
+    setPlayingIndex(null)
+    const video = videoRefs.current[index]
+    if (video) {
+      video.pause()
+      video.currentTime = 0
+    }
+  }
+
+  const handleCardClick = (index) => {
+    if (playingIndex === index) {
+      handleInteractionEnd(index)
+    } else {
+      handleInteractionStart(index)
+    }
   }
 
   return (
@@ -111,12 +128,18 @@ function GrowthSection() {
           </p>
 
           <div className="power-cards">
-            <div className="power-card power-card-video" onClick={() => handlePlay(0)}>
+            <div
+              className="power-card power-card-video"
+              onMouseEnter={() => handleInteractionStart(0)}
+              onMouseLeave={() => handleInteractionEnd(0)}
+              onClick={() => handleCardClick(0)}
+            >
               <video
                 ref={(el) => (videoRefs.current[0] = el)}
                 src={video1}
                 className="power-card-video-el"
-                controls={playingIndex === 0}
+                muted
+                loop
                 playsInline
               />
               {playingIndex !== 0 && (
@@ -128,12 +151,18 @@ function GrowthSection() {
               )}
             </div>
 
-            <div className="power-card power-card-video" onClick={() => handlePlay(1)}>
+            <div
+              className="power-card power-card-video"
+              onMouseEnter={() => handleInteractionStart(1)}
+              onMouseLeave={() => handleInteractionEnd(1)}
+              onClick={() => handleCardClick(1)}
+            >
               <video
                 ref={(el) => (videoRefs.current[1] = el)}
                 src={video2}
                 className="power-card-video-el"
-                controls={playingIndex === 1}
+                muted
+                loop
                 playsInline
               />
               {playingIndex !== 1 && (
@@ -145,12 +174,18 @@ function GrowthSection() {
               )}
             </div>
 
-            <div className="power-card power-card-video" onClick={() => handlePlay(2)}>
+            <div
+              className="power-card power-card-video"
+              onMouseEnter={() => handleInteractionStart(2)}
+              onMouseLeave={() => handleInteractionEnd(2)}
+              onClick={() => handleCardClick(2)}
+            >
               <video
                 ref={(el) => (videoRefs.current[2] = el)}
                 src={video3}
                 className="power-card-video-el"
-                controls={playingIndex === 2}
+                muted
+                loop
                 playsInline
               />
               {playingIndex !== 2 && (
