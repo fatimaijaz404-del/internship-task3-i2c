@@ -1779,6 +1779,34 @@
   text-shadow: none;
 }
 
+.shift-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  padding: 18px;
+  background-color: #cce6ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.shift-quote-top {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(27, 34, 58);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.shift-overlay-0 {
+  background-color: #f6f6f6;
+}
+
+.shift-overlay-1 {
+  background-color: #fff7ef;
+}
+
 @media (max-width: 768px) {
   .trusted-section {
     padding: 2rem 1.5rem;

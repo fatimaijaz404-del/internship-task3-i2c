@@ -8,6 +8,10 @@ import trustedVideo1 from '../assets/8034705-uhd_2160_3840_25fps.mp4'
 import trustedVideo2 from '../assets/8479278-hd_1080_1920_25fps.mp4'
 import trustedVideo3 from '../assets/8135691-uhd_2160_4096_25fps.mp4'
 
+import qikLogo from '../assets/Qik-Logo.svg'
+import carIqLogo from '../assets/CarIQ-Logo.svg'
+import jifitiLogo from '../assets/Jifiti-Logo.svg'
+
 const STATS = [
   {
     image: trustedImg,
@@ -36,6 +40,7 @@ const SHIFT_CARDS = [
     role: 'CFO and COO',
     company: 'Qik',
     video: trustedVideo1,
+    logo: qikLogo,
   },
   {
     quote: "Issuing the world's first payment credential to a machine.",
@@ -43,6 +48,7 @@ const SHIFT_CARDS = [
     role: 'CEO & Founder',
     company: 'Car IQ',
     video: trustedVideo2,
+    logo: carIqLogo,
   },
   {
     quote: 'A digital-first credit/rewards program for consumers and businesses.',
@@ -50,6 +56,7 @@ const SHIFT_CARDS = [
     role: 'Chief Solutions Officer',
     company: 'Jifiti',
     video: trustedVideo3,
+    logo: jifitiLogo,
   },
 ]
 
@@ -132,7 +139,7 @@ function TrustedSection() {
           <div className="shift-cards">
             {SHIFT_CARDS.map((item, index) => (
               <div
-                className="shift-card"
+                className={`shift-card shift-card-${index}`}
                 key={index}
                 onMouseEnter={() => {
                   setPlayingIndex(index)
@@ -146,6 +153,19 @@ function TrustedSection() {
                     vid.currentTime = 0
                   }
                 }}
+                onClick={() => {
+                  if (playingIndex === index) {
+                    setPlayingIndex(null)
+                    const vid = videoRefs.current[index]
+                    if (vid) {
+                      vid.pause()
+                      vid.currentTime = 0
+                    }
+                  } else {
+                    setPlayingIndex(index)
+                    videoRefs.current[index]?.play()
+                  }
+                }}
               >
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
@@ -156,21 +176,30 @@ function TrustedSection() {
                   playsInline
                 />
 
-                <div
-                  className={`shift-thumb-overlay ${
-                    playingIndex === index ? 'hidden' : ''
-                  }`}
-                />
-
-                <p className="shift-quote">{item.quote}</p>
-
-                <div className="shift-footer">
-                  <p className="shift-name">
-                    {item.name}
-                    <span className="shift-role"> {item.role}</span>
-                  </p>
-                  <span className="shift-company">{item.company}</span>
-                </div>
+                {playingIndex !== index ? (
+                  <div className={`shift-overlay shift-overlay-${index}`}>
+                    <p className="shift-quote-top">{item.quote}</p>
+                    <img
+                      src={item.logo}
+                      alt={item.company}
+                      className="power-card-logo power-card-logo-bottom"
+                    />
+                  </div>
+                ) : (
+                  <>
+                    <img
+                      src={item.logo}
+                      alt={item.company}
+                      className="power-card-logo power-card-logo-top"
+                    />
+                    <div className="power-play-info">
+                      <p className="power-card-name">{item.name}</p>
+                      <p className="power-card-role">
+                        {item.role} | {item.company}
+                      </p>
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
