@@ -2563,7 +2563,20 @@
   height: auto;
   transform: translateY(-50%);
   z-index: 2;
+  opacity: 0;
+}
+
+.cta-car-animate {
   animation: driveAcross 2.5s ease-in-out forwards;
+}
+
+.cta-overlay {
+  opacity: 0;
+}
+
+.cta-overlay-animate {
+  animation: fadeInText 0.8s ease forwards;
+  animation-delay: 2.3s;
 }
 
 @keyframes driveAcross {
