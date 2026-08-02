@@ -1706,8 +1706,20 @@
     flex-direction: column;
   }
 
+  .trusted-right {
+    position: static;
+    width: 100%;
+  }
+
+  .trusted-image-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
   .trusted-stats-under {
     flex-wrap: wrap;
+    margin-left: 0;
+    padding-left: 24px;
   }
 
   .shift-cards {
