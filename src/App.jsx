@@ -29,12 +29,13 @@ function App() {
         <ComprehensiveSection />  
         <EstablishedSection />  
         <TrustedSection />
+                <StickyFooterNav />
+
         <AwardCTASection /> 
         {/* Agle sections yahan andar aayenge, jaise: */}
         {/* <NextSection /> */}
         {/* <AnotherSection /> */}
 
-        <StickyFooterNav />
       </div>
     </>
   )
